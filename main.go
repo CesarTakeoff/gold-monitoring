@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"takeoff.com/monitoring/db/oracle"
 	"takeoff.com/monitoring/db/postgres"
 )
@@ -34,7 +32,7 @@ func main() {
 	//fmt.Println(today, today.String())
 
 	intData := oracle.MdmResult(goldDB, "220414")
-	fmt.Printf("Successful connection. Current data is: %v\n", intData)
+	//fmt.Printf("Successful connection. Current data is: %v\n", intData)
 	values := postgres.ResulStr{
 		IntDate:      intData.IntDate,
 		IntTimestamp: intData.IntTimestamp,
